@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>NodeJS CRUD</title>
+
+        <link rel="stylesheet" href="../src/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../src/css/style.css">
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">NodeJS CRUD</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="#">Cadastro <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="/show">Pessoas</a>
+                </div>
+            </div>
+        </nav>
+        <div id="cadastro">
+            <h2>Cadastrar</h2>
+            <form action="/show" method="POST">
+                <div class="form-group">
+                    <input type="text" placeholder="Nome" name="name">
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Sobrenome" name="surname">
+                </div>
+                <button type="submit" class="btn btn-outline-primary">Submit</button>
+            </form>
+        </div>
+
+        <script src="../src/js/jquery-3.3.1.min.js"></script>
+        <script src="../src/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+</html>

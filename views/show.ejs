@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>NodeJS CRUD</title>
+
+        <link rel="stylesheet" href="../src/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../src/css/style.css">
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">NodeJS CRUD</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="/">Cadastro</a>
+                    <a class="nav-item nav-link active" href="/show">Pessoas <span class="sr-only">(current)</span></a>
+                </div>
+            </div>
+        </nav>
+        <h2>Pessoas</h2>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Nome</th>
+                    <th>Sobrenome</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% data.forEach(function(details) { %>
+                <tr>
+                    <td>
+                        <%= details.name %>
+                    </td>
+                    <td>
+                        <%= details.surname %>
+                    </td>
+                    <td><a href="/edit/<%= details._id %>">Editar</a> | <a href="/delete/<%= details._id %>">Excluir</a></td>
+                </tr>
+                <% }) %>
+            </tbody>
+        </table>
+        </div>
+        <a type="button" class="btn btn-outline-dark" href="/">Voltar</a>
+        <script src="../src/js/jquery-3.3.1.min.js"></script>
+        <script src="../src/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+</html>
